@@ -11,28 +11,30 @@
 	all over the web. Our app will centralise these libraries, with the added benefit of assisting our user using AI.
 
 3) Where will you collect appropriate data: GitHub, since it has public repositories with code examples; StackOverflow
-	Labeling: label data according to difficulty (beginner, intermediate, experienced) and use reinforced learning to improve 
+	Labeling: label data according to difficulty (beginner, intermediate, experienced), topic (loops, DStructs, conditionals) and language (Python, Cpp, Js) and use reinforced learning to improve 
 	model by having users provide feedback
 	
 	Data formatting, preprocessing: need to make code found in data more readable for user; need to add comments to pieces of 
 	code if not there; will need to make sure, in order to make sure we can process code, application knows the syntax and 
 	semantics of different languages; will also process past user experience in producing code.
 	
-	What kind of ML: Supervised learning - working with, and learning from, labeled data
+	What kind of ML: Supervised learning - working with, and learning from, labeled data and Reinforced via user feedback.
 	
 	What kind of algorithm: A large language model (LLM) - a generative pre-trained transformer (GPT) to be specific. Why? 
 	Because "it's particularly well-suited for tasks like code-generation because code, like natural language, has specific 
 	syntactic and semantic rules that transformers are designed to capture".
 	
 	Do you expect problems with over- and under-fitting?: Yes, some coding tasks might get classified as either being too 
-	difficult or too easy
+	difficult or too easy. Too much training on specific libraries can reduce generalization (overfit), sparse labels might cause poor topic categorization (underfit).
+
+		Mitigation: Regular cross-validation, augmentation, and continual user feedback
 	
-	How will you evaluate if your approach is working as intended?: User feedback
+	How will you evaluate if your approach is working as intended?: User feedback, track learning progression (is ai doing good?) --> try dif models and strats
 	
 4) Deployment: will be deployed on online servers, such as AWS, Google Cloud, Azure; will be a web application
 
-5) Users will pay a monthly subscription, in increasing cost relative to amount of languages customer wishes to 
-   learn, to use app
+5) Freemium: 1 language with basic tutorials. Paid tiers: (monthly) increasing cost relative to amount of languages customer wishes to 
+   learn, advanced ML powered code feedback
    
 6) We'll need to acknowledge that the code we use is learnt and is not ours as such
    
@@ -42,4 +44,5 @@
    Make sure not to collect sensitive data, as it does not even contribute to making the model better - only 
    collect it for user authentication purposes (login, subscription change, etc.)
    
-7)
+7) instill confidence in investors: 
+
